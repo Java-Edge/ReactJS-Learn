@@ -3,6 +3,7 @@ var ReactDOM = require('react-dom');
 import ComponentHeader from './components/header';
 import ComponentFooter from './components/footer';
 import BodyIndex from './components/bodyindex';
+import Hello from './components/Hello';
 
 class Index extends React.Component {
 	render() {
@@ -37,6 +38,15 @@ arr.forEach(item=> {
 	nameArr.push(temp);
 })
 
+const me = {
+	name: 'JavaEdge',
+	age: "18",
+	gender: 'boy'
+}
 
-ReactDOM.render(
-	<Index/>, document.getElementById('example'));
+ReactDOM.render(<div>
+	123
+	<Hello {...me}></Hello>
+</div>, document.getElementById('example'));
+// ReactDOM.render(
+// 	<Index/>, document.getElementById('example'));
