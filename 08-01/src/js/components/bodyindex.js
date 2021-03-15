@@ -10,7 +10,7 @@ export default class BodyIndex extends React.Component {
 	render() {
 		setTimeout(() => {
 			//更改 state 的时候
-			this.setState({username: "IMOOC", age: 30});
+			this.setState({username: "JavaEdge", age: 30});
 		}, 4000);
 		return (
 			<div>
