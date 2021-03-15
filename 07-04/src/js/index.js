@@ -6,6 +6,9 @@ import BodyIndex from './components/bodyindex';
 import Hello from './components/Hello';
 // import classnote from './classnote';
 import inherit from './inherit';
+// 导入评论项子组件
+import CmtItem from './components/CmtItem';
+import CmtList from './components/CmtList';
 
 // class 关键字创建组件
 class Index extends React.Component {
@@ -60,34 +63,6 @@ const me = {
     name: 'JavaEdge',
     age: "18",
     gender: 'boy'
-}
-
-function CmtItem(props) {
-    return <div key={props.user}>
-        <h1>评论人：{props.user}</h1>
-        <p>评论内容：{props.content}</p>
-    </div>
-}
-
-class CmtList extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            CommentList: [
-                {id: 1, user: 'sss', content: 'java'},
-                {id: 2, user: 'java', content: 'java'},
-                {id: 3, user: 'edge', content: 'java'},
-                {id: 4, user: 'nb', content: 'java'},
-            ]
-        }
-    }
-
-    render() {
-        return <div>
-            <h1> 这是评论列表组件 </h1>
-            {this.state.CommentList.map(item => <CmtItem {...item}></CmtItem>)}
-        </div>
-    }
 }
 
 ReactDOM.render(<div>
