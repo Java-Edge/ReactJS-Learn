@@ -3,6 +3,11 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
+  mode: 'development', // production可用于上线前压缩代码
+  devServer: {
+    host: '127.0.0.1',
+    port: '8090'
+  },
   context: path.join(__dirname),
   devtool: debug ? "inline-sourcemap" : null,
   entry: "./src/js/index.js",

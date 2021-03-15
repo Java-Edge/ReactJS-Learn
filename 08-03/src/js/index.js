@@ -3,6 +3,8 @@ var ReactDOM = require('react-dom');
 import ComponentHeader from './components/header';
 import ComponentFooter from './components/footer';
 import BodyIndex from './components/bodyindex';
+import BindEvent from './components/bindevent';
+
 class Index extends React.Component {
 
 	componentWillMount(){
@@ -34,4 +36,7 @@ class Index extends React.Component {
 	}
 }
 ReactDOM.render(
-	<Index/>, document.getElementById('example'));
+	<BindEvent/>, document.getElementById('example'));
+
+// ReactDOM.render(
+// 	<Index/>, document.getElementById('example'));
