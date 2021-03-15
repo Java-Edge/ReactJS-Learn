@@ -9,6 +9,15 @@ import inherit from './inherit';
 
 // class 关键字创建组件
 class Index extends React.Component {
+
+    constructor() {
+        // 由于Movie组件，继承了React.Component 自定义的构造器中，必须调用super
+        super();
+        this.state = {
+            msg: 'hello java'
+        }
+    }
+
     // render 用于渲染当前组件的虚拟  DOM 元素。是该类的一个实例方法！
     render() {
 
