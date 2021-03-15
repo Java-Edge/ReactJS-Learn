@@ -42,7 +42,7 @@ class Rectangle {
         this.width = width;
     }
 
-    // static info = "eee"
+    // info = '222';
 
     // Getter
     get area() {

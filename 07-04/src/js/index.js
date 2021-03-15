@@ -7,7 +7,9 @@ import Hello from './components/Hello';
 // import classnote from './classnote';
 import inherit from './inherit';
 
+// class 关键字创建组件
 class Index extends React.Component {
+    // render 用于渲染当前组件的虚拟  DOM 元素。是该类的一个实例方法！
     render() {
 
         /*
@@ -20,12 +22,16 @@ class Index extends React.Component {
         }
         */
 
+        // 必须要有返回值
         return (
             <div>
                 <ComponentHeader/>
                 <BodyIndex/>
+                {/*不同于function，如果想使用外界传过来的 props 参数，无需接收，直接访问 this.props.xxx 即可,注意加上大括号，当做 js 执行，而非字符串*/}
+                {/*在class 组件内部，this 表示当前组件的实例对象*/}
+                这是 Index 组件 --- {this.props.name} -- {this.props.age}
                 <ComponentFooter/>
-                {arr.map(item => <div key={item}><h3>{item}</h3></div>)}
+                {/*{arr.map(item => <div key={item}><h3>{item}</h3></div>)}*/}
             </div>
         );
     }
@@ -48,8 +54,10 @@ const me = {
 }
 
 ReactDOM.render(<div>
-    123
-    <Hello {...me}></Hello>
+    {/*这里的 Index 标签，就是 Index 类的一个实例对象*/}
+    {/*这里就是外界传来的 me，可用 props 访问*/}
+    <Index {...me}>
+    </Index>
 </div>, document.getElementById('example'));
 // ReactDOM.render(
 // 	<Index/>, document.getElementById('example'));
