@@ -4,7 +4,8 @@ import ComponentHeader from './components/header';
 import ComponentFooter from './components/footer';
 import BodyIndex from './components/bodyindex';
 import Hello from './components/Hello';
-import classnote from './classnote';
+// import classnote from './classnote';
+import inherit from './inherit';
 
 class Index extends React.Component {
     render() {
